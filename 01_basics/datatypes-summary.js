@@ -1,4 +1,4 @@
-//  Primitive
+//  Primitive   (copy of variable you get )  or pass by value    // Stack memory  
 
 //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
 
@@ -12,13 +12,13 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+console.log(id === anotherId);  // false 
 
 // const bigNumber = 3456543576654356754n
 
 
 
-// Reference (Non primitive)
+// Reference (Non primitive)  (reference to memory you get ) or pass by reference    // heap memory 
 
 // Array, Objects, Functions
 
@@ -32,7 +32,7 @@ const myFunction = function(){
     console.log("Hello world");
 }
 
-console.log(typeof anotherId);
+console.log(typeof anotherId);  // symbol
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
@@ -65,3 +65,26 @@ console.log(typeof anotherId);
 // int x = 10; // x is a variable of type int
 // String name = "John"; // name is a variable of type String
 // JavaScript's dynamic typing allows for more flexibility but can lead to potential runtime errors if not handled carefully. Static typing, on the other hand, provides better type safety at the cost of some initial verbosity and strictness.
+
+
+
+
+
+// stack and heap 
+
+let Id = "abc"
+let anotherid = Id;    // here copy of Id is given to anotherId not refernce to original memory 
+anotherid = "bca"
+console.log(Id); // abc 
+console.log(anotherid); // bca 
+
+let obj = {
+    email:"abc@gmail.com",
+    id: "a112"
+}
+
+let obj2 = obj;  // here both pointing to same memory in heap 
+obj2.email = "a2z@gmail.com"; 
+console.log(obj.email);  // a2z@gmail.com
+console.log(obj2.email);  // a2z@gmail.com 
+
