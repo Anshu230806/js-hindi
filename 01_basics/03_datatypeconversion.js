@@ -35,6 +35,8 @@ console.log(num4);  // 1
 
 // "33" => 33
 // "33abc" => NaN
+// null => 0
+// undefined => NaN
 // true => 1 , false => 0
 
 
@@ -60,7 +62,7 @@ let negValue = -value
 // console.log(2+2);
 // console.log(2-2);
 // console.log(2*2);
-// console.log(2**3);
+// console.log(2**3);  for power 2 to power 3 
 // console.log(2/3);
 // console.log(2%3);
 
@@ -77,8 +79,9 @@ let str3 = str1 + str2
 
 // console.log( (3 + 4) * 5 % 3);
 
-// console.log(+true);
-// console.log(+"");
+// console.log(+true);  // 1
+// console.log(+"");    // 0
+//  console.log(""+);   // error 
 
 let num1, num8, num9
 
