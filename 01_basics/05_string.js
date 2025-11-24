@@ -2,9 +2,12 @@ const name="hitesh "
 const repoCount = 50
 
 // console.log(name + repoCount + " value ");
-// better way  using bacticks  string interpotation 
+// better way  using bacticks  string interpolation ( ${...} )
+// Template Strings use back-ticks (``) rather than the quotes ("") to define a string:
 console.log(`my name is ${name} and my repoCount ${repoCount}  `);
 
+
+// string as objects
 const gameName = new String("hitesh-hc")
 console.log(typeof gameName ); // object 
 console.log(gameName);  // [String: 'hiteshhc']
@@ -20,6 +23,11 @@ console.log(gameName.toUpperCase());  //HITESHHC
 
 console.log(gameName.charAt(2));  // t
 console.log(gameName.indexOf("t"));  // 2
+console.log(gameName.at(-2)); // h   last second char 
+// charAt() not take but at() can take negative val
+
+
+
 
 const newString = gameName.substring(0,4); 
 console.log(newString); // hite
@@ -46,6 +54,26 @@ console.log(url.includes('sundar'));  //  false
 
 console.log(gameName.split('-'));  // [ 'hitesh', 'hc' ]
 
+
+// (\)  backslash turns special character(', ", \ ) into char string  e.g
+console.log("we are so called \"engineers\" for a reason");
+
+
+// JavaScript objects cannot be compared.
+let x = new String("John");
+let y = new String("John"); 
+// if you compare above two they return a false
+// Comparing two JavaScript objects always returns false. //  here x and y
+let x1 ="John";
+console.log(x1 == x);  // true 
+console.log(x1 === x);  // false 
+console.log(x == y);    // false 
+console.log(x === y);    // false
+
+//Both methods accept a second parameter as the starting position for the search:
+let text = "Please locate where 'locate' occurs!";
+let ind = text.indexOf("locate", 15);  // 21
+let indx = text.lastIndexOf("John");  // -1
 
 
 
