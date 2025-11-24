@@ -12,7 +12,13 @@ const anotherNum = 123.8943;
 console.log(anotherNum.toPrecision(3));  //124
 console.log(anotherNum.toPrecision(4)); // 123.9
 console.log(anotherNum.toPrecision(2));//  1.2e+2
+let x = 123e5;    // 12300000
+let y = 123e-5;   // 0.00123
 
+let x1 = "100";
+let y1= "10";
+console.log(x - y);  // 90  string converted to number 
+console.log(x+y); // 10010   + operator works here as concatinating two string 
 const hundreds = 1000000;
 
 console.log(hundreds.toLocaleString()); // commas acc to us standard   // 1,000,000
