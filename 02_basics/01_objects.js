@@ -9,7 +9,7 @@ const mySym = Symbol("key1")
 const JsUser = {
     name: "Hitesh",
     "full name": "Hitesh Choudhary",
-    [mySym]: "mykey1",
+    [mySym]: "mykey1", 
     age: 18,
     location: "Jaipur",
     email: "hitesh@google.com",
@@ -23,7 +23,7 @@ const JsUser = {
 // console.log(JsUser[mySym])
 
 JsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
+// Object.freeze(JsUser)  // after using freeze you cannot change the values of JsUser object 
 JsUser.email = "hitesh@microsoft.com"
 // console.log(JsUser);
 
@@ -34,5 +34,5 @@ JsUser.greetingTwo = function () {
     console.log(`Hello JS user, ${this.name}`);
 }
 
-console.log(JsUser.greeting());
-console.log(JsUser.greetingTwo());
+console.log(JsUser.greeting()); // Hello JS user
+console.log(JsUser.greetingTwo());  // Hello JS user, Hitesh

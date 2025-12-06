@@ -26,8 +26,15 @@ console.log(real_another_array);
 
 console.log(Array.isArray("Hitesh"))  // false
 console.log(Array.from("Hitesh"))  // [ 'H', 'i', 't', 'e', 's', 'h' ]
-console.log(Array.from({name: "hitesh"})) //  []//  interesting
-
+console.log(Array.from({name: "hitesh"})) //  [] //  interesting
+/*
+Array.from(): This static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+{name: "hitesh"}: This is a plain JavaScript object, not an array or an iterable (like a string, Map, Set).
+Result: Since the object lacks iterable properties or a length property, Array.from() doesn't find any elements to convert and returns an empty array []
+*/
+Array.from(Object.keys({name: "hitesh"})) // would give ['name']
+Array.from(Object.values({name: "hitesh"})) //   would give ['hitesh']
+Array.from(Object.entries({name: "hitesh"})) // would give [['name' 'hitesh']]. 
 let score1 = 100
 let score2 = 200
 let score3 = 300

@@ -54,7 +54,7 @@ users[1].email
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
-
+// Topic - destucturing 
 const course = {
     coursename: "js in hindi",
     price: "999",
@@ -63,19 +63,29 @@ const course = {
 
 // course.courseInstructor
 
-const {courseInstructor: instructor} = course
+const {courseInstructor} = course  // course , from where you are extracted the values   // {} in curly braces what we want to extract 
+console.log(courseInstructor);
+const {courseInstructor: instructor} = course  // here  we rename it 
 
-// console.log(courseInstructor);
 console.log(instructor);
-
+// example of destructuring  in react  
+/*
+const navbar = ({company}) => { 
+    }
+    navbar (company = "hitesh")
+*/
+ // JSON API 
+ // keys and values both are string 
 // {
 //     "name": "hitesh",
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
-
+// array format API 
 [
     {},
     {},
     {}
 ]
+// RandomUserMe API // it will generate random API
+// JSON formatter 

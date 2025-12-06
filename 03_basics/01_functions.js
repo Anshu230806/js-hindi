@@ -8,6 +8,7 @@ function sayMyName(){
 }
 
 // sayMyName()
+// here , sayMyName is reference and sayMyName()  this is exexution of function
 
 // function addTwoNumbers(number1, number2){
 
