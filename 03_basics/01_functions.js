@@ -15,6 +15,7 @@ function sayMyName(){
 //     console.log(number1 + number2);
 // }
 console.log(addTwoNumbers(3, 5));  // 8
+// Function Declarations
 function addTwoNumbers(number1, number2){  // number1 and number2 are parameters 
 
     // let result = number1 + number2
@@ -137,7 +138,7 @@ let myFunction2= (x, y) => (x * y);
 let Myfunc = new Function("a" , "b" , "return a*b" );
 
 console.log(Myfunc(3, 4)); 
-console.log(typeof(Myfunc));
+console.log(typeof(Myfunc));  // function
 
 // Most of the time, you can avoid using the new keyword in JavaScript.
 // Functions are Objects
@@ -147,3 +148,28 @@ console.log(typeof(Myfunc));
 
 // The arguments.length property returns the number of arguments received when the function was invoked:
 // The toString() method returns the function as a string:
+
+
+// topic : Function Hoisting
+// Hoisting applies to variable declarations and to function declarations.
+
+//Because of this, JavaScript functions can be called before they are declared:
+// Functions defined using an expression are not hoisted.
+
+
+// Function Invocation
+// The function above does not belong to any object. But in JavaScript there is always a default global object.
+
+//In HTML the default global object is the HTML page itself, so the function above "belongs" to the HTML page.
+
+//In a browser or web browser the page object is the browser window. The function above automatically becomes a window function.
+
+// myFunction() and window.myFunction() is the same function:
+// best practice to invoke a function 
+//   function myFunction(a, b) {
+ //   return a * b;
+//   }
+ //  window.myFunction(10, 2); 
+
+
+
